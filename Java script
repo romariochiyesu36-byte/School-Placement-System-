@@ -1,1 +1,36 @@
+// SELECT SCHOOL
+function selectSchool(name){
+    document.getElementById("schoolName").value = name;
+    document.getElementById("applyForm").scrollIntoView({behavior:"smooth"});
+}
 
+// SEARCH SCHOOL
+function searchSchool(){
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let cards = document.querySelectorAll(".school-card");
+
+    cards.forEach(card=>{
+        let text = card.innerText.toLowerCase();
+        card.style.display = text.includes(input) ? "block" : "none";
+    });
+}
+
+// RESET SEARCH
+function resetSearch(){
+    document.getElementById("searchInput").value = "";
+    document.querySelectorAll(".school-card").forEach(card=>{
+        card.style.display = "block";
+    });
+}
+
+// SUBMIT FORM
+function submitApplication(event){
+    event.preventDefault();
+
+    let school = document.getElementById("schoolName").value;
+
+    alert("Application submitted successfully for " + school);
+
+    event.target.reset();
+    document.getElementById("schoolName").value = "";
+}
