@@ -1,1 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zambia Smart School Placement System</title>
 
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Zambia Smart School Placement System</h1>
+<p>Find schools and apply online easily across Zambia</p>
+</header>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Schools</a>
+<a href="#">Apply</a>
+<a href="#">Contact</a>
+</nav>
+
+<div class="container">
+
+<!-- SEARCH -->
+<div class="search-box">
+<input type="text" id="searchInput" placeholder="Search school or town...">
+<button onclick="searchSchool()">Search</button>
+<button onclick="resetSearch()">Reset</button>
+</div>
+
+<!-- SCHOOL LIST -->
+<div class="school-list">
+
+<div class="school-card">
+<h2>Solwezi Secondary School</h2>
+<p>📍 Solwezi</p>
+<p class="available">Places Left: 3</p>
+<a class="apply-btn" onclick="selectSchool('Solwezi Secondary School')">Apply</a>
+</div>
+
+<div class="school-card">
+<h2>Lusaka High School</h2>
+<p>📍 Lusaka</p>
+<p class="available">Places Left: 5</p>
+<a class="apply-btn" onclick="selectSchool('Lusaka High School')">Apply</a>
+</div>
+
+<div class="school-card">
+<h2>Ndola Girls School</h2>
+<p>📍 Ndola</p>
+<p class="available">Places Left: 2</p>
+<a class="apply-btn" onclick="selectSchool('Ndola Girls School')">Apply</a>
+</div>
+
+</div>
+
+<!-- FORM -->
+<div class="form-section" id="applyForm">
+<h2>Application Form</h2>
+
+<form onsubmit="submitApplication(event)">
+<input type="text" placeholder="Full Name" required>
+<input type="email" placeholder="Email Address" required>
+
+<input type="text" id="schoolName" placeholder="Selected School" readonly required>
+
+<select required>
+<option value="">Select Grade</option>
+<option>Grade 8</option>
+<option>Grade 9</option>
+<option>Grade 10</option>
+<option>Grade 11</option>
+<option>Grade 12</option>
+</select>
+
+<button type="submit">Submit Application</button>
+</form>
+</div>
+
+</div>
+
+<footer>
+<p>Zambia Smart School Placement System</p>
+<p>Designed by Romario Chiyesu William</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
