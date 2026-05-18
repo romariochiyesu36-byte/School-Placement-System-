@@ -1,2 +1,2 @@
 # School-Placement-System-
-Find schools and apply online easy across Zambia 
+Find schools and apply online easy within Zambia, let's work together 
